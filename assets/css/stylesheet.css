@@ -1,0 +1,165 @@
+/* Font baby */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Min body & mine h1 elementer */
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 24pt;
+  color: #009bb0;
+}
+h2 {
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-size: 24pt;
+  color: #009bb0;
+}
+h3 {
+  font-family: "Roboto Condensed";
+  font-weight: 300;
+  font-size: 20pt;
+  color: #009bb0;
+  font-style: italic;
+  margin-top: 0px;
+}
+p {
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-size: 14pt;
+  color: #444444;
+}
+span {
+  color: #009bb0;
+}
+nav > a {
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-size: 26pt;
+  color: #aedde3;
+}
+
+/* Main Header Styling Section */
+header > div {
+  position: relative;
+  height: 300px;
+}
+
+.header-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 2.5rem;
+  left: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.header-nav {
+  background-color: #385c95;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.header-nav > a {
+  color: #98dee4;
+  text-decoration: none;
+  font-size: 1.45rem;
+  padding: 10px;
+}
+
+.header-nav > a:nth-child(3) {
+  padding-right: 25px;
+}
+
+/* Main Content Section (Billeder m Tekst) */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 0;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+}
+
+/* Grid Display Af Billeder */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 0 20px;
+}
+
+/* Grid Display af footer */
+.grid-section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px 15px;
+  align-items: start;
+  width: 100%;
+  margin: 0 25px;
+}
+
+.grid-item {
+  display: contents;
+}
+
+.title,
+.text {
+  margin: 0;
+}
+
+/* Her kommer mine Media Queries AKA Justerbar site AKA Responsiv Design AKA Smooth Operater AKA lækkerheden selv */
+@media (max-width: 1200px) {
+  header > div {
+    height: 230px;
+  }
+
+  .header-nav {
+    justify-content: flex-start;
+  }
+
+  .responsive-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  header > div {
+    max-height: 160px;
+  }
+
+  .logo {
+    max-width: 90%;
+  }
+
+  .header-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .header-nav > a {
+    border-bottom: 1px solid white;
+  }
+
+  .header-nav > a:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
