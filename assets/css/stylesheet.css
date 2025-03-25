@@ -76,6 +76,7 @@ header > div {
 .header-nav a:hover {
   background-color: #5f7ecb;
   color: #fff;
+  transition: ease-in 0.5s;
 }
 
 .header-nav > a:nth-child(3) {
@@ -180,6 +181,12 @@ footer div p {
   .image-grid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: 2, 2fr;
   }
 }
 
