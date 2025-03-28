@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Min body & mine h1 elementer */
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-family: "Oswald", sans-serif;
   font-weight: 300;
@@ -59,12 +63,26 @@ header > div {
   max-width: 100%;
   height: auto;
 }
+.header-top {
+  position: relative;
+  height: 300px;
+}
 
 .header-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #385c95;
   display: flex;
   justify-content: flex-end;
   gap: 30px;
+}
+/* Her flexer jeg min header som har logo og nav inden i */
+header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
 }
 
 .header-nav > a {
@@ -73,10 +91,12 @@ header > div {
   font-size: 1.45rem;
   padding: 10px;
 }
+
+/* Her definerer jeg hvad der sker når mine "a" blir hovered */
 .header-nav a:hover {
   background-color: #5f7ecb;
   color: #fff;
-  transition: ease-in 0.5s;
+  transition: ease-in 0.2s;
 }
 
 .header-nav > a:nth-child(3) {
@@ -153,7 +173,7 @@ footer div p {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   header > div {
     max-height: 160px;
   }
